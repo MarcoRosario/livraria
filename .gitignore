@@ -260,4 +260,4 @@ poetry.toml
 # ruff
 .ruff_cache/
 
-# End of https://www.toptal.com/developers/gitignore/api/python,django
+# End of https://www.toptal.com/developers/gitignore/api/python,django.pdm-python
