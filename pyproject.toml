@@ -5,8 +5,8 @@ dev = [
     "black>=23.3.0",
 ]
 [project]
-name = "livraria"
-version = "0.1.0"
+name = ""
+version = ""
 description = ""
 authors = [
     {name = "Marco", email = "marcoantoniorosario.academico@gmail.com"},
