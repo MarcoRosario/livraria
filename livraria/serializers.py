@@ -23,3 +23,4 @@ class LivroListSerializer(ModelSerializer):
     class Meta:
         model = Livro
         fields = ["id", "titulo", "preco"]
+        
