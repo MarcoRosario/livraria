@@ -7,9 +7,3 @@ class UsuarioSerializer(ModelSerializer):
     class Meta:
         model = Usuario
         fields = "__all__"
-
-INSTALLED_APPS = [
-    "usuario", 
-    "livraria",
-]
-
