@@ -57,6 +57,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -83,12 +85,26 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if MODE in ["PRODUCTION", "MIGRATE"]:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.getenv("DATABASE_NAME"),
+            "USER": os.getenv("DATABASE_USER"),
+            "PASSWORD": os.getenv("DATABASE_PASSWORD"),
+            "HOST": os.getenv("DATABASE_HOST"),
+            "PORT": os.getenv("DATABASE_PORT"),
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+
+print(MODE, DATABASES)
 
 
 # Password validation
@@ -171,3 +187,7 @@ if MODE in ["PRODUCTION", "MIGRATE"]:
 else:    
     MY_IP = os.getenv("MY_IP", "127.0.0.1")
     MEDIA_URL = f"http://{MY_IP}:19003/media/"
+
+if MODE == "PRODUCTION":
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
