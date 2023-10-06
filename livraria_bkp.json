@@ -234,6 +234,19 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-10-06T12:03:22.924Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "Marco Antonio do Rosário",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -763,10 +776,10 @@
 },
 {
   "model": "sessions.session",
-  "pk": "j6htsxjsmku1jymq447b04lwnp8hjhzh",
+  "pk": "98lole3iis395jndcti97i5ugh455w7n",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-bbyhpOcM1tpe4wBypDipEHeHSCmgfTPzXiLQttawdV7ClMVZaHH63SKlB7cd5Du12yzT3NZlinJX5EG7vM6Zn5fD_Tuo1Ou3xqzBIVlAHmC0BgcHRiOWbBIAquTZF0WsLMRCRhF4stk4V7SFMSXx_gC2ezcX:1qnODL:OTeFORpIfyafUh4PEYKVLhjw4hK_m32pQ5OwPu-SzCU",
-    "expire_date": "2023-10-16T19:04:19.473Z"
+    "session_data": ".eJxVjDEOwjAMRe-SGUWyDSRmZOcMkRMnpIBSqWknxN1ppQ6w_vfef5sgy1zD0vMUBjUXA-bwu0VJz9w2oA9p99Gmsc3TEO2m2J12exs1v667-3dQpde1zkgCkTS6I_moJ5ZCiqDsOVJif2YCJw4RQUpWLh6hEKwOeigC5vMF45s3nw:1qojUR:Zq_5lN_9bliXMoyemxAXN2jVJknw9UVVGx9oxO_PiTo",
+    "expire_date": "2023-10-20T11:59:31.510Z"
   }
 },
 {
@@ -775,6 +788,14 @@
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGln-bbyhpOcM1tpe4wBypDipEHeHSCmgfTPzXiLQttawdV7ClMVZaHH63SKlB7cd5Du12yzT3NZlinJX5EG7vM6Zn5fD_Tuo1Ou3xqzBIVlAHmC0BgcHRiOWbBIAquTZF0WsLMRCRhF4stk4V7SFMSXx_gC2ezcX:1qo4vb:j0HDuqxXpCPVK_EFkFI6PQMkaK_lL5LiDZJiuf-40CQ",
     "expire_date": "2023-10-18T16:40:51.313Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yuskpp1q1hbgulc2tfbhdhg5bbfuj0fn",
+  "fields": {
+    "session_data": ".eJxVjDEOwjAMRe-SGUWyDSRmZOcMkRMnpIBSqWknxN1ppQ6w_vfef5sgy1zD0vMUBjUXA-bwu0VJz9w2oA9p99Gmsc3TEO2m2J12exs1v667-3dQpde1zkgCkTS6I_moJ5ZCiqDsOVJif2YCJw4RQUpWLh6hEKwOeigC5vMF45s3nw:1qoSD8:5WEAsITXIpablw0aur-ZxqzfDOD0kNegiT0ziaajzxg",
+    "expire_date": "2023-10-19T17:32:30.908Z"
   }
 },
 {
@@ -848,6 +869,20 @@
   }
 },
 {
+  "model": "livraria.categoria",
+  "pk": 11,
+  "fields": {
+    "descricao": "Desenvolvimento Web"
+  }
+},
+{
+  "model": "livraria.categoria",
+  "pk": 12,
+  "fields": {
+    "descricao": "Desenvolvimento Web com Django"
+  }
+},
+{
   "model": "livraria.editora",
   "pk": 1,
   "fields": {
@@ -880,6 +915,14 @@
   }
 },
 {
+  "model": "livraria.autor",
+  "pk": 3,
+  "fields": {
+    "nome": "Marco Antonio do Rosário",
+    "email": "marcoantonio@gmail.com"
+  }
+},
+{
   "model": "livraria.livro",
   "pk": 1,
   "fields": {
@@ -900,7 +943,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$MFjnsix6qFkoYipbVybPvz$DZc1xVUkPLReCXNTSCwm6lOqfNZ/syZZZdu7/525Cqw=",
-    "last_login": "2023-10-04T16:40:51.309Z",
+    "last_login": "2023-10-06T11:59:31.452Z",
     "is_superuser": true,
     "first_name": "",
     "last_name": "",
