@@ -47,3 +47,8 @@ startapp = "python manage.py startapp {args}"
 loaddata = "python manage.py loaddata {args}"
 dumpdata = "python manage.py dumpdata {args}"
 
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
+
