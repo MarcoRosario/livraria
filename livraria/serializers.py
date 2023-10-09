@@ -16,6 +16,8 @@ class EditoraSerializer(ModelSerializer):
         fields = "__all__"
 
 class LivroDetailSerializer(ModelSerializer):
+    capa = ImageSerializer(required=False)
+    
     class Meta:
         model = Livro
         fields = "__all__"
@@ -35,9 +37,11 @@ class LivroSerializer(ModelSerializer):
         write_only=True,
     )
     capa = ImageSerializer(required=False, read_only=True)
+    
+    class Meta:
+        model = Livro
+        fields = "__all__"
 
-class LivroDetailSerializer(ModelSerializer):
-    capa = ImageSerializer(required=False)
 
 
 

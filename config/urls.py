@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 from rest_framework.routers import DefaultRouter
 
-from livraria.views import CategoriaViewSet, EditoraViewSet
+from livraria.views import CategoriaViewSet, EditoraViewSet, LivroViewSet
 
 from usuario.router import router as usuario_router
 
@@ -41,8 +41,8 @@ from uploader.router import router as uploader_router
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
-router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
+router.register(r"livros", LivroViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
