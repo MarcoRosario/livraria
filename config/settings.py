@@ -21,6 +21,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'cloudinary_storage',
+    'cloudinary',
     "rest_framework",
     "livraria",
     "rest_framework_simplejwt",
@@ -40,9 +42,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.contrib.staticfiles',
-    'cloudinary_storage',
-    'cloudinary',
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -145,3 +144,4 @@ else:
     MEDIA_URL = f"http://{MY_IP}:19003/media/"
 
 print(MODE, MEDIA_URL, DATABASES)
+
