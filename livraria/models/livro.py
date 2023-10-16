@@ -1,30 +1,7 @@
 from django.db import models
 
+from livraria.models import Autor, Categoria, Editora
 from uploader.models import Image
-
-class Categoria(models.Model):
-    descricao = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.descricao
-
-class Editora(models.Model):
-    nome = models.CharField(max_length=100)
-    site = models.URLField(null=True, blank=True)
-
-    def __str__(self):
-        return self.nome
-
-class Autor(models.Model):
-    nome = models.CharField(max_length=255)
-    email = models.EmailField(null=True, blank=True)
-
-    def __str__(self):
-        return self.nome
-
-    class Meta:
-        verbose_name = "Autor"
-        verbose_name_plural = "Autores"
 
 class Livro(models.Model):
     titulo = models.CharField(max_length=255)
@@ -36,8 +13,7 @@ class Livro(models.Model):
     )
     editora = models.ForeignKey(Editora, on_delete=models.PROTECT, related_name="livros")
     autores = models.ManyToManyField(Autor, related_name="livros")
-    capa = models.ForeignKey(
-    Image,
+    capa = models.ForeignKey(Image,
     related_name="+",
     on_delete=models.CASCADE,
     null=True,
@@ -48,7 +24,3 @@ class Livro(models.Model):
     def __str__(self):
         return f"{self.titulo} ({self.quantidade})"
     
-
-    
-
-
