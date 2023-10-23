@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 from rest_framework.routers import DefaultRouter
 
-from livraria.views import CategoriaViewSet, EditoraViewSet, LivroViewSet
+from livraria.views import AutorViewSet, CategoriaViewSet, CompraViewSet, EditoraViewSet, LivroViewSet
 
 from usuario.router import router as usuario_router
 
@@ -44,6 +44,7 @@ router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"livros", LivroViewSet)
+router.register(r"compras", CompraViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -71,4 +72,6 @@ urlpatterns = [
 
 
 urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
+
+
 
