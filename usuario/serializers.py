@@ -18,3 +18,10 @@ class UsuarioSerializer(ModelSerializer):
     class Meta:
         model = Usuario
         fields = "__all__"
+    
+class CriarEditarCompraSerializer(ModelSerializer):
+    itens = ItensCompraSerializer(many=True)
+
+    class Meta:
+        model = Compra
+        fields = ("usuario", "itens")

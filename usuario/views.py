@@ -7,3 +7,9 @@ from usuario.serializers import UsuarioSerializer
 class UsuarioViewSet(ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+
+class CompraViewSet(ModelViewSet):
+    queryset = Compra.objects.all()
+    serializer_class = CompraSerializer
+
+

@@ -8,6 +8,9 @@ class EditoraSerializer(ModelSerializer):
         fields = "__all__"
 
 
+
+
+
     
         
 
