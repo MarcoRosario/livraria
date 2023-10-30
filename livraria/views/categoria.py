@@ -7,6 +7,8 @@ from livraria.serializers import CategoriaSerializer
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
+    filterset_fields = ["categoria__descricao", "editora__nome"]
+
     # permission_classes = [IsAuthenticated]
 
 

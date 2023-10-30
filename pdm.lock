@@ -6,7 +6,7 @@ groups = ["default", "dev"]
 cross_platform = true
 static_urls = false
 lock_version = "4.3"
-content_hash = "sha256:fff8e015ea1329f529e68f0b70dcff2cc3f66d16efb1b38ad9f9d26e94aacc6d"
+content_hash = "sha256:43d6ecea1e859f575e57fed7b8dc4e3cfdf46ac00d00c5159fb4a8dcf4b77cb4"
 
 [[package]]
 name = "asgiref"
@@ -231,6 +231,19 @@ dependencies = [
 files = [
     {file = "django-cloudinary-storage-0.3.0.tar.gz", hash = "sha256:debd403a5f225c9d35c4af508ff4abc7fdc262129464134b60b2feeb2c44d3e1"},
     {file = "django_cloudinary_storage-0.3.0-py3-none-any.whl", hash = "sha256:95c855c7334141b2a485ea7eb5716de87bb6ce0d848e205debb3a3ab7bbbd49a"},
+]
+
+[[package]]
+name = "django-filter"
+version = "23.3"
+requires_python = ">=3.7"
+summary = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
+dependencies = [
+    "Django>=3.2",
+]
+files = [
+    {file = "django-filter-23.3.tar.gz", hash = "sha256:015fe155582e1805b40629344e4a6cf3cc40450827d294d040b4b8c1749a9fa6"},
+    {file = "django_filter-23.3-py3-none-any.whl", hash = "sha256:65bc5d1d8f4fff3aaf74cb5da537b6620e9214fb4b3180f6c560776b1b6dccd0"},
 ]
 
 [[package]]

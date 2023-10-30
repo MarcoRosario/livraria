@@ -7,5 +7,7 @@ from livraria.serializers import EditoraSerializer
 class EditoraViewSet(ModelViewSet):
     queryset = Editora.objects.all()
     serializer_class = EditoraSerializer
+    filterset_fields = ["categoria__descricao", "editora__nome"]
+
     
 

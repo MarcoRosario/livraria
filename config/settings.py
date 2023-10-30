@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     "usuario", # inclua essa linha
     "uploader",
     "drf_spectacular",
-    
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -117,6 +117,8 @@ REST_FRAMEWORK = {
     #     "rest_framework.permissions.DjangoModelPermissions",
     # ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
 }
 
 AUTH_USER_MODEL = "usuario.Usuario"
@@ -144,4 +146,6 @@ else:
     MEDIA_URL = f"http://{MY_IP}:19003/media/"
 
 print(MODE, MEDIA_URL, DATABASES)
+
+
 
