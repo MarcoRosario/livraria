@@ -14,3 +14,8 @@ class CompraViewSet(ModelViewSet):
         if usuario.groups.filter(name="Administradores"):
             return Compra.objects.all()
         return Compra.objects.filter(usuario=usuario)
+    serializer_class = CompraSerializer
+    def get_serializer_class(self):
+        if self.action == "create" or self.action == "update":
+            return CriarEditarCompraSerializer
+        return CompraSerializer
